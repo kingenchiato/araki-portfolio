@@ -33,12 +33,12 @@ function CornerBloom({ className }) {
   return (
     <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
       <g transform="translate(6 8)">
-        <path d="M18 22c-7 1-11-6-7-11 5 1 8 6 7 11z" fill="rgba(255,255,255,0.82)" stroke="rgba(86,124,116,0.55)" strokeWidth="0.6" />
-        <path d="M20 20c0-8 6-12 11-9-3 3-7 6-11 9z" fill="rgba(226,244,236,0.9)" stroke="rgba(86,124,116,0.45)" strokeWidth="0.6" />
-        <path d="M22 24c-6 4-6 10-1 12 2-5 3-8 1-12z" fill="rgba(255,255,255,0.75)" stroke="rgba(86,124,116,0.45)" strokeWidth="0.6" />
-        <path d="M24 18c6-5 13-3 14 2-5 0-9 1-14-2z" fill="rgba(210,232,224,0.85)" stroke="rgba(86,124,116,0.4)" strokeWidth="0.6" />
-        <circle cx="22" cy="21" r="2.1" fill="#fff" stroke="rgba(110,146,138,0.55)" strokeWidth="0.5" />
-        <path d="M34 10c4 2 5 6 2 8" fill="none" stroke="rgba(86,124,116,0.4)" strokeWidth="0.7" />
+        <path d="M18 22c-7 1-11-6-7-11 5 1 8 6 7 11z" fill="rgba(255,247,244,0.9)" stroke="rgba(154,59,50,0.45)" strokeWidth="0.6" />
+        <path d="M20 20c0-8 6-12 11-9-3 3-7 6-11 9z" fill="rgba(243,214,208,0.9)" stroke="rgba(154,59,50,0.4)" strokeWidth="0.6" />
+        <path d="M22 24c-6 4-6 10-1 12 2-5 3-8 1-12z" fill="rgba(255,247,244,0.85)" stroke="rgba(154,59,50,0.4)" strokeWidth="0.6" />
+        <path d="M24 18c6-5 13-3 14 2-5 0-9 1-14-2z" fill="rgba(232,196,188,0.9)" stroke="rgba(154,59,50,0.35)" strokeWidth="0.6" />
+        <circle cx="22" cy="21" r="2.1" fill="#fff" stroke="rgba(154,59,50,0.45)" strokeWidth="0.5" />
+        <path d="M34 10c4 2 5 6 2 8" fill="none" stroke="rgba(154,59,50,0.35)" strokeWidth="0.7" />
       </g>
     </svg>
   );
@@ -50,11 +50,11 @@ function ThumbsUp() {
       <svg viewBox="0 0 48 48">
         <path
           d="M16 21v16H8.5A2.5 2.5 0 0 1 6 34.5v-11A2.5 2.5 0 0 1 8.5 21H16z"
-          fill="#14b8a6"
+          fill="#9a3b32"
         />
         <path
           d="M18 20.2 24.2 8.4c.7-1.3 2.6-1.5 3.6-.4.6.7.9 1.6.8 2.5l-.8 6.3h8.7c2.2 0 3.8 2.1 3.2 4.2l-2.6 10.2A4 4 0 0 1 33.3 35H18V20.2z"
-          fill="#2dd4bf"
+          fill="#c4564a"
         />
         <path d="M24 12.5c1.2 2.2 1.6 4.2 1.2 6.2" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.2" strokeLinecap="round" />
       </svg>

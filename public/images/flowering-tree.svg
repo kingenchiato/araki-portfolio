@@ -9,7 +9,7 @@
     </filter>
   </defs>
   <g filter="url(#trail)" stroke-linecap="round" stroke-linejoin="round">
-    <g stroke="#f6e7c4" stroke-width="1.6" opacity="0.22">
+    <g stroke="#6e5344" stroke-width="1.6" opacity="0.28">
       <path d="M600 1540 C592 1280 628 1080 604 860 C586 700 618 540 600 390"/>
       <path d="M604 980 C470 930 330 900 190 820"/>
       <path d="M598 940 C740 890 900 850 1040 760"/>
@@ -20,7 +20,7 @@
       <path d="M598 500 C560 360 500 250 430 160"/>
       <path d="M606 480 C680 340 760 240 860 150"/>
     </g>
-    <g stroke="#fff6e4" stroke-width="0.7" opacity="0.34">
+    <g stroke="#8d6b52" stroke-width="0.7" opacity="0.22">
       <path d="M600 1540 C592 1280 628 1080 604 860 C586 700 618 540 600 390"/>
       <path d="M604 980 C470 930 330 900 190 820"/>
       <path d="M598 940 C740 890 900 850 1040 760"/>
@@ -29,7 +29,7 @@
       <path d="M600 560 C500 460 430 320 470 170"/>
       <path d="M604 540 C710 430 800 300 770 140"/>
     </g>
-    <g stroke="#ffd7a8" stroke-width="1.15" opacity="0.2">
+    <g stroke="#9a3b32" stroke-width="1.15" opacity="0.28">
       <path d="M190 820 C150 780 128 730 158 692 C190 654 236 668 228 712 C220 748 186 760 190 820"/>
       <path d="M250 470 C210 430 188 380 220 346 C252 312 298 330 286 372"/>
       <path d="M1040 760 C1090 720 1120 668 1084 630 C1048 594 996 612 1004 658"/>

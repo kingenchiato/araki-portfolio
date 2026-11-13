@@ -3,35 +3,27 @@
 import { useEffect, useRef } from "react";
 
 function paintStar(ctx, x, y, radius, hue, alpha) {
-  const glow = ctx.createRadialGradient(x, y, 0, x, y, radius * 3);
-  glow.addColorStop(0, `hsla(${hue}, 40%, 98%, ${alpha})`);
-  glow.addColorStop(0.2, `hsla(${hue}, 80%, 82%, ${alpha * 0.4})`);
-  glow.addColorStop(1, `hsla(${hue}, 90%, 70%, 0)`);
+  const glow = ctx.createRadialGradient(x, y, 0, x, y, radius * 6);
+  glow.addColorStop(0, `hsla(${hue}, 58%, 42%, ${alpha})`);
+  glow.addColorStop(0.4, `hsla(${hue}, 46%, 40%, ${alpha * 0.28})`);
+  glow.addColorStop(1, `hsla(${hue}, 40%, 38%, 0)`);
   ctx.fillStyle = glow;
   ctx.beginPath();
-  ctx.arc(x, y, radius * 3, 0, Math.PI * 2);
+  ctx.arc(x, y, radius * 6, 0, Math.PI * 2);
   ctx.fill();
 
-  ctx.strokeStyle = `hsla(${hue}, 30%, 96%, ${alpha * 0.75})`;
-  ctx.lineWidth = Math.max(0.45, radius * 0.22);
+  ctx.strokeStyle = `hsla(${hue}, 42%, 32%, ${alpha * 0.7})`;
+  ctx.lineWidth = Math.max(0.4, radius * 0.18);
   ctx.beginPath();
-  ctx.moveTo(x - radius * 4.5, y);
-  ctx.lineTo(x + radius * 4.5, y);
-  ctx.moveTo(x, y - radius * 4.5);
-  ctx.lineTo(x, y + radius * 4.5);
+  ctx.moveTo(x - radius * 3.2, y);
+  ctx.lineTo(x + radius * 3.2, y);
+  ctx.moveTo(x, y - radius * 3.2);
+  ctx.lineTo(x, y + radius * 3.2);
   ctx.stroke();
 
-  ctx.strokeStyle = `hsla(${hue}, 40%, 94%, ${alpha * 0.4})`;
+  ctx.fillStyle = `hsla(${hue}, 62%, 48%, ${alpha})`;
   ctx.beginPath();
-  ctx.moveTo(x - radius * 2.4, y - radius * 2.4);
-  ctx.lineTo(x + radius * 2.4, y + radius * 2.4);
-  ctx.moveTo(x + radius * 2.4, y - radius * 2.4);
-  ctx.lineTo(x - radius * 2.4, y + radius * 2.4);
-  ctx.stroke();
-
-  ctx.fillStyle = `hsla(${hue}, 20%, 100%, ${alpha})`;
-  ctx.beginPath();
-  ctx.arc(x, y, Math.max(0.8, radius * 0.85), 0, Math.PI * 2);
+  ctx.arc(x, y, Math.max(0.7, radius * 0.55), 0, Math.PI * 2);
   ctx.fill();
 }
 
@@ -42,16 +34,16 @@ export default function Starfield() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    const stars = Array.from({ length: 260 }, (_, index) => {
-      const featured = index % 4 === 0;
+    const stars = Array.from({ length: 72 }, (_, index) => {
+      const featured = index % 5 === 0;
       return {
         x: Math.random(),
         y: Math.random(),
-        size: featured ? 0.85 + Math.random() * 0.7 : 0.2 + Math.random() * 0.35,
+        size: featured ? 0.9 + Math.random() * 0.55 : 0.25 + Math.random() * 0.4,
         depth: 0.25 + Math.random() * 0.75,
-        hue: index % 7 === 0 ? 36 : index % 5 === 0 ? 220 : 205,
+        hue: index % 6 === 0 ? 8 : 34,
         phase: Math.random() * Math.PI * 2,
-        drift: (Math.random() - 0.5) * 0.00004,
+        drift: (Math.random() - 0.5) * 0.000025,
         featured
       };
     });
@@ -84,9 +76,9 @@ export default function Starfield() {
         if (star.featured) {
           paintStar(ctx, px, py, star.size * flicker, star.hue, 0.95);
         } else {
-          const dust = ctx.createRadialGradient(px, py, 0, px, py, star.size * 3);
-          dust.addColorStop(0, `hsla(${star.hue}, 25%, 98%, ${0.9 * flicker})`);
-          dust.addColorStop(1, `hsla(${star.hue}, 80%, 80%, 0)`);
+          const dust = ctx.createRadialGradient(px, py, 0, px, py, star.size * 4);
+          dust.addColorStop(0, `hsla(${star.hue}, 48%, 36%, ${0.55 * flicker})`);
+          dust.addColorStop(1, `hsla(${star.hue}, 40%, 40%, 0)`);
           ctx.fillStyle = dust;
           ctx.beginPath();
           ctx.arc(px, py, star.size * 1.6, 0, Math.PI * 2);

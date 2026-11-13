@@ -120,7 +120,7 @@ export default function Hero() {
         const lead = facing > 0.84;
         film.style.zIndex = facing > 0.15 ? "6" : "2";
         film.style.opacity = lead ? "1" : String(0.7 + Math.max(0, facing) * 0.3);
-        film.style.filter = lead ? "brightness(1.2) saturate(1.15) contrast(1.05)" : "none";
+        film.style.filter = lead ? "saturate(0.96) contrast(1.02)" : "saturate(0.92)";
         film.style.visibility = "visible";
       }
       const notes = praise.children;
