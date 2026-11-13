@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Clover from "./Clover";
-import TokyoNow from "./TokyoNow";
 import { nav, profile } from "../lib/content";
 
 export default function Header() {
@@ -12,15 +10,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="site-header">
-      <div className="header-center">
-      <Link href="/" className="brand" onClick={() => setOpen(false)}>
-        <Clover />
-        <span>
-          <strong>{profile.name}</strong>
-          <small>ポートフォリオ</small>
-        </span>
+    <header className="top">
+      <Link href="/" className="top-name" onClick={() => setOpen(false)}>
+        {profile.name}
+        <small>{profile.kana}</small>
       </Link>
+      <button
+        className="top-menu"
+        type="button"
+        aria-expanded={open}
+        aria-controls="site-nav"
+        onClick={() => setOpen((value) => !value)}
+      >
+        {open ? "閉じる" : "目次"}
+      </button>
       <nav id="site-nav" className={open ? "open" : ""} aria-label="主要">
         {nav.map((item) => (
           <Link
@@ -33,17 +36,6 @@ export default function Header() {
           </Link>
         ))}
       </nav>
-      </div>
-      <TokyoNow />
-      <button
-        className="menu-toggle"
-        type="button"
-        aria-expanded={open}
-        aria-controls="site-nav"
-        onClick={() => setOpen((value) => !value)}
-      >
-        {open ? "閉じる" : "メニュー"}
-      </button>
     </header>
   );
 }

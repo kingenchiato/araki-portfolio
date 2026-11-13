@@ -1,22 +1,20 @@
 import PortfolioCatalog from "../../components/PortfolioCatalog";
-import PortfolioFlow from "../../components/PortfolioFlow";
 import { pages } from "../../lib/content";
 
 export const metadata = { title: pages.portfolio.title };
 
 export default function Page() {
   return (
-    <main className="below-hero sheet-page">
-      <PortfolioFlow />
-      <section className="panel">
-        <div className="section-head sheet-top">
+    <main className="page">
+      <section className="page-wrap">
+        <header className="page-head">
           <p className="eyebrow">ポートフォリオ</p>
           <h1>{pages.portfolio.title}</h1>
           <p>
             {pages.portfolio.lead}
-            カードを開くと、画面と内容を確認できます。
+            行を開くと、画面と内容を確認できます。
           </p>
-        </div>
+        </header>
         <PortfolioCatalog />
       </section>
     </main>

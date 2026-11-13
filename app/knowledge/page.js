@@ -5,8 +5,8 @@ export const metadata = { title: "一般知識" };
 
 export default function KnowledgePage() {
   return (
-    <main className="below-hero sheet-page">
-      <section className="panel sheet-wide">
+    <main className="page">
+      <section className="page-wrap">
         <div className="section-head sheet-top">
           <p className="eyebrow">一般知識</p>
           <h1>「DXしましょう」の次の月曜に、何が変わるか</h1>
@@ -15,7 +15,7 @@ export default function KnowledgePage() {
           </p>
         </div>
 
-        <article className="glass stack-block">
+        <article className="block">
           <h2>人手は、まだ足りない。ただし「壊滅的」一色ではなくなった</h2>
           <p>
             IPA の「DX動向2026」は、2025年度に企業へ聞いた結果です。DX を進める人材の「量」がやや不足、または大幅に不足と答えた企業は85.5%です。まだ大多数です。一方で「大幅に不足」だけを見ると、2023年度の62.1%、2024年度の58.5%から、2025年度は50.1%まで下がっています。足りないこと自体は続いていて、いちばん厳しい答えは少し減った、という読み方です。
@@ -43,7 +43,7 @@ export default function KnowledgePage() {
           </p>
         </article>
 
-        <article className="glass stack-block">
+        <article className="block">
           <h2>小さい会社は、人材の前に「やる意味」で止まっている</h2>
           <p>
             同じ調査で、DX に取り組んでいない理由を人数規模で分けると、景色が違います。従業員100人以下では「自社が DX に取り組むメリットがわからない」が54.0%で一番多い。101人から300人では、知識不足と、戦略を描く人、現場で動かす人の不足が上位です。意欲はあるが担い手がいない、という層です。
@@ -70,7 +70,7 @@ export default function KnowledgePage() {
           </p>
         </article>
 
-        <article className="glass stack-block">
+        <article className="block">
           <h2>生成AIの効果は、いまのところ社内の速さに寄っている</h2>
           <p>
             IPA の同じ冊子で、AI 導入の効果は「業務が効率化したり迅速化した」が91.6%です。次が「企画提案の品質や速さが向上した」48.9%、「残業が減った」29.2%。外に向いた成果は小さく、「顧客満足度が向上した」4.5%、「売上や利益が向上した」3.9%です。
@@ -93,7 +93,7 @@ export default function KnowledgePage() {
           </p>
         </article>
 
-        <article className="glass stack-block">
+        <article className="block">
           <h2>2030年の不足人数は、2019年のシナリオである</h2>
           <p>
             「2030年に IT 人材が数十万人足りない」という話は、経済産業省が2019年に出した需給の試算がもとになっています。条件を変えた複数のシナリオで、不足の幅が違います。いまの在職者を数えた結果ではありません。記事によっては最大約79万人、別の要約では約45万人と、同じ報告書の別の列が一人歩きしています。
@@ -106,7 +106,7 @@ export default function KnowledgePage() {
           </p>
         </article>
 
-        <article className="glass stack-block">
+        <article className="block">
           <h2>この先、発注側が見ておくと得なこと</h2>
           <p>
             予測を断定しては書けません。調査から言えるのは、次の三つが同時に起きている、ということだけです。人がまだ足りない。生成AIの手応えは社内作業に寄っている。小さい会社は目的が言語化されないと動かない。
@@ -136,7 +136,7 @@ export default function KnowledgePage() {
           </table>
         </article>
 
-        <article className="glass stack-block">
+        <article className="block">
           <h2>見積の前に、五つの質問だけ先に書く</h2>
           <ol>
             <li>その作業は、いま誰が、週に何回やっていますか。</li>

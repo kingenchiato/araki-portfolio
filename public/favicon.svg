@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#f7f3eb"/>
-  <rect x="8" y="8" width="48" height="48" fill="#9a3b32"/>
-  <text x="32" y="43" text-anchor="middle" font-family="serif" font-size="28" fill="#fbf7f0">秀</text>
+  <rect width="64" height="64" fill="#ffffff"/>
+  <g fill="none" stroke="#111111" stroke-width="1.4">
+    <path d="M8 0v64M22 0v64M49 0v64"/>
+    <path d="M0 12h64M0 38h64M0 51h64"/>
+  </g>
 </svg>

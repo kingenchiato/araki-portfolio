@@ -20,8 +20,8 @@ const toc = [
 
 export default function LearnPage() {
   return (
-    <main className="below-hero sheet-page">
-      <section className="panel sheet-wide">
+    <main className="page">
+      <section className="page-wrap">
         <div className="section-head sheet-top">
           <p className="eyebrow">学び</p>
           <h1>発注の前に、道具の名前を仕事の話へ戻す</h1>
@@ -35,7 +35,7 @@ export default function LearnPage() {
           ))}
         </nav>
 
-        <article className="glass stack-block" id="html">
+        <article className="block" id="html">
           <div className="stack-head"><Mark name="html" /><h2>HTML と CSS</h2></div>
           <div className="study-grid">
             <div>
@@ -62,7 +62,7 @@ export default function LearnPage() {
           </div>
         </article>
 
-        <article className="glass stack-block" id="js">
+        <article className="block" id="js">
           <div className="stack-head"><Mark name="js" /><h2>JavaScript</h2></div>
           <p>
             ページを開いたあとで動く係です。HTML が貼り紙、JavaScript が「この欄、空のまま送らないでください」と止める人です。
@@ -78,7 +78,7 @@ export default function LearnPage() {
           </p>
         </article>
 
-        <article className="glass stack-block" id="wp">
+        <article className="block" id="wp">
           <div className="stack-head"><Mark name="wp" /><h2>WordPress</h2></div>
           <div className="study-grid">
             <div>
@@ -107,7 +107,7 @@ export default function LearnPage() {
           </p>
         </article>
 
-        <article className="glass stack-block" id="figma">
+        <article className="block" id="figma">
           <div className="stack-head"><Mark name="figma" /><h2>Figma</h2></div>
           <p>
             実装の前に、画面を紙の代わりに並べる場所です。ボタンの位置、項目の抜け、スマホで親指が届くかを、コードを書く前に見ます。
@@ -127,7 +127,7 @@ export default function LearnPage() {
           </p>
         </article>
 
-        <article className="glass stack-block" id="flutter">
+        <article className="block" id="flutter">
           <div className="stack-head"><Mark name="flutter" /><h2>Flutter（iOS / Android）</h2></div>
           <div className="study-grid">
             <div>
@@ -148,7 +148,7 @@ export default function LearnPage() {
           </div>
         </article>
 
-        <article className="glass stack-block" id="ops">
+        <article className="block" id="ops">
           <div className="stack-head"><Mark name="db" /><h2>業務システム</h2></div>
           <p>
             予約、顧客、勤怠、管理画面。名前は違っても、やっていることは「紙や表計算で二人が同じマスを触っている」のをやめることです。
@@ -169,7 +169,7 @@ export default function LearnPage() {
           </p>
         </article>
 
-        <article className="glass stack-block" id="api">
+        <article className="block" id="api">
           <div className="stack-head"><Mark name="api" /><h2>REST API</h2></div>
           <p>
             厨房とホールが、伝票で注文を渡すやり方です。画面と画面が、決まった用紙（住所と項目）でデータを渡します。人がコピペする隙間を減らすためのものです。
@@ -190,7 +190,7 @@ export default function LearnPage() {
           </p>
         </article>
 
-        <article className="glass stack-block" id="db">
+        <article className="block" id="db">
           <div className="stack-head"><Mark name="db" /><h2>データベース</h2></div>
           <p>
             台帳の本体です。表計算との違いは、同じ顧客を二箇所に書かないことです。予約の行には顧客番号だけ置き、名前や電話は顧客の側に一回だけ書きます。電話番号が変わったとき、予約を全部開かずに済みます。
@@ -200,7 +200,7 @@ export default function LearnPage() {
           </p>
         </article>
 
-        <article className="glass stack-block" id="pay">
+        <article className="block" id="pay">
           <div className="stack-head"><Mark name="pay" /><h2>決済と通知</h2></div>
           <div className="study-grid">
             <div>
@@ -218,7 +218,7 @@ export default function LearnPage() {
           </div>
         </article>
 
-        <article className="glass stack-block" id="ai">
+        <article className="block" id="ai">
           <div className="stack-head"><Mark name="ai" /><h2>AI・LLM と RAG</h2></div>
           <p>
             文章を読んで、抜き出す、短くする、仕分ける、下書きする。これが今の使い方の中心です。社内の規程や過去の見積を渡して、その範囲で答えさせるやり方を RAG と呼びます。インターネット全体の記憶で答えさせるのとは違います。
@@ -242,7 +242,7 @@ export default function LearnPage() {
           </p>
         </article>
 
-        <article className="glass stack-block" id="kintone">
+        <article className="block" id="kintone">
           <div className="stack-head"><Mark name="kintone" /><h2>kintone</h2></div>
           <p>
             サイボウズの、業務アプリを自分たちで組めるサービスです。項目（フィールド）、1件の記録（レコード）、誰が見て誰が直せるか（権限）を、アプリごとに持ちます。日本の会社で、表計算の隣に置かれていることが多い棚です。
@@ -261,7 +261,7 @@ export default function LearnPage() {
           </table>
         </article>
 
-        <article className="glass stack-block" id="git">
+        <article className="block" id="git">
           <div className="stack-head"><Mark name="git" /><h2>Git と GitHub</h2></div>
           <p>
             プログラムの変更履歴です。「火曜の夕方、料金の計算を誰が変えたか」を残せます。GitHub は、その履歴を複数人で置く場所です。コメント付きで直して、問題なければ本番側へ合流させます。

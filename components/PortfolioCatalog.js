@@ -92,36 +92,34 @@ export default function PortfolioCatalog() {
       {portfolioCategories.map((category) => {
         const items = itemsInCategory(category.id);
         return (
-          <section key={category.id} className="folio-group" aria-labelledby={`folio-${category.id}`}>
+          <section key={category.id} className="group" aria-labelledby={`folio-${category.id}`}>
             <h2 id={`folio-${category.id}`}>{category.title}</h2>
             {category.id === "logo" ? (
-              <p className="folio-note">手作業で制作したロゴです。</p>
+              <p className="note">手作業で制作したロゴです。</p>
             ) : null}
             {items.length ? (
-              <div className={category.id === "logo" ? "folio-grid folio-grid-5" : category.id === "card" ? "folio-grid folio-grid-2" : "folio-grid"}>
+              <div className={category.id === "logo" || category.id === "card" ? "mosaic" : "work-index"}>
                 {items.map((item) => (
                   <button
                     key={item.id}
                     id={item.id}
                     type="button"
-                    className="glass folio-card"
+                    className="work-row"
                     onClick={() => setOpen(item)}
                   >
-                    <span className="folio-shot">
-                      {item.images.map((src) => (
-                        <img key={src} src={src} alt="" />
-                      ))}
+                    <span className="work-shot">
+                      <img src={item.images[0]} alt="" />
                     </span>
-                    <span className="folio-copy">
+                    <span className="work-copy">
                       <strong>{item.title}</strong>
-                      <span className="meta">{item.skills.join("、")}</span>
+                      <span className="meta">{(item.skills || []).join("、")}</span>
                       <span>{item.summary}</span>
                     </span>
                   </button>
                 ))}
               </div>
             ) : (
-              <p className="folio-empty">これから追加します</p>
+              <p className="note">これから追加します</p>
             )}
           </section>
         );
