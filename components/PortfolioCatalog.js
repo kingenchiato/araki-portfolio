@@ -84,21 +84,33 @@ function ProjectDialog({ item, onClose }) {
   );
 }
 
+const studioIds = new Set(["logo", "card"]);
+
 export default function PortfolioCatalog() {
   const [open, setOpen] = useState(null);
 
   return (
     <div className="folio-catalog">
+      <nav className="toc-row" aria-label="領域">
+        {portfolioCategories.map((category) => (
+          <a key={category.id} href={`#folio-${category.id}`}>
+            {category.short || category.title}
+          </a>
+        ))}
+      </nav>
       {portfolioCategories.map((category) => {
         const items = itemsInCategory(category.id);
         return (
           <section key={category.id} className="group" aria-labelledby={`folio-${category.id}`}>
-            <h2 id={`folio-${category.id}`}>{category.title}</h2>
+            <header className="group-head">
+              <h2 id={`folio-${category.id}`}>{category.title}</h2>
+              <p className="count-mark">{items.length}件</p>
+            </header>
             {category.id === "logo" ? (
               <p className="note">手作業で制作したロゴです。</p>
             ) : null}
             {items.length ? (
-              <div className={category.id === "logo" || category.id === "card" ? "mosaic" : "work-index"}>
+              <div className={studioIds.has(category.id) ? "work-grid work-grid-studio" : "work-grid"}>
                 {items.map((item) => (
                   <button
                     key={item.id}
@@ -111,9 +123,11 @@ export default function PortfolioCatalog() {
                       <img src={item.images[0]} alt="" />
                     </span>
                     <span className="work-copy">
+                      {item.label && item.label !== item.title ? (
+                        <span className="work-label">{item.label}</span>
+                      ) : null}
                       <strong>{item.title}</strong>
-                      <span className="meta">{(item.skills || []).join("、")}</span>
-                      <span>{item.summary}</span>
+                      <span className="work-summary">{item.summary}</span>
                     </span>
                   </button>
                 ))}

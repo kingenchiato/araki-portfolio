@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" fill="none">
+  <g stroke="#b7aa9a" stroke-linecap="square">
+    <path stroke-width="1.4" d="M72 0 V720"/>
+    <path stroke-width="0.6" d="M80 0 V720"/>
+    <path stroke-width="0.6" d="M168 48 V420"/>
+    <path stroke-width="0.6" d="M176 48 V300"/>
+    <path stroke-width="0.8" d="M310 0 V250"/>
+    <path stroke-width="0.6" d="M520 180 V720"/>
+    <path stroke-width="1.2" d="M528 180 V560"/>
+    <path stroke-width="0.6" d="M760 0 V390"/>
+    <path stroke-width="0.6" d="M768 40 V390"/>
+    <path stroke-width="0.8" d="M980 220 V720"/>
+    <path stroke-width="0.6" d="M1124 0 V180"/>
+    <path stroke-width="1.1" d="M1134 0 V180"/>
+    <path stroke-width="0.7" d="M0 64 H420"/>
+    <path stroke-width="0.6" d="M0 72 H280"/>
+    <path stroke-width="0.8" d="M80 196 H760"/>
+    <path stroke-width="0.6" d="M520 208 H1180"/>
+    <path stroke-width="1.2" d="M168 360 H980"/>
+    <path stroke-width="0.6" d="M176 368 H640"/>
+    <path stroke-width="0.7" d="M0 520 H520"/>
+    <path stroke-width="0.6" d="M760 548 H1200"/>
+    <path stroke-width="0.8" d="M80 640 H420"/>
+    <path stroke-width="0.6" d="M980 92 H1200"/>
+    <path stroke-width="0.7" d="M860 640 L1040 500"/>
+    <path stroke-width="0.6" d="M900 680 L1120 520"/>
+  </g>
+  <path stroke="#9c2f2a" stroke-opacity="0.55" stroke-width="1.2" d="M48 0 V720"/>
+</svg>

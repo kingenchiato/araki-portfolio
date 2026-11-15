@@ -52,6 +52,7 @@ export default function CustomerVoices({ heading = true }) {
         <div className="band-head">
           <p className="eyebrow">評価</p>
           <h2>お客様の声</h2>
+          <p>掲載している評価です。画像を開くと、原文を確認できます。</p>
         </div>
       ) : null}
       <div className="voice-list">

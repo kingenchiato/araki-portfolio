@@ -1,5 +1,6 @@
 import PortfolioCatalog from "../../components/PortfolioCatalog";
 import { pages } from "../../lib/content";
+import { portfolioItems } from "../../lib/portfolio";
 
 export const metadata = { title: pages.portfolio.title };
 
@@ -12,7 +13,7 @@ export default function Page() {
           <h1>{pages.portfolio.title}</h1>
           <p>
             {pages.portfolio.lead}
-            行を開くと、画面と内容を確認できます。
+            全{portfolioItems.length}件を、同じ大きさのカードで並べています。カードを開くと、画面と内容を確認できます。
           </p>
         </header>
         <PortfolioCatalog />
