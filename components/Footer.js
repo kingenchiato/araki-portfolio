@@ -24,9 +24,12 @@ export default function Footer() {
           autoPlay
           preload="metadata"
           aria-label="制作動画"
+          suppressHydrationWarning
         />
       </div>
-      <p className="copyright">© {new Date().getFullYear()} {profile.name}</p>
+      <p className="copyright" suppressHydrationWarning>
+        © {new Date().getFullYear()} {profile.name}
+      </p>
     </footer>
   );
 }
